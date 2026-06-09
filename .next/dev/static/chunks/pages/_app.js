@@ -1,0 +1,13 @@
+__turbopack_load_page_chunks__("/_app", [
+  "static/chunks/0r55_next_dist_compiled_1h4zryo._.js",
+  "static/chunks/0r55_next_dist_shared_lib_0ph5rns._.js",
+  "static/chunks/0r55_next_dist_client_1curij-._.js",
+  "static/chunks/0r55_next_dist_0c-rhjq._.js",
+  "static/chunks/0r55_next_app_0q01hio.js",
+  "static/chunks/[next]_entry_page-loader_ts_0jphyo4._.js",
+  "static/chunks/0r55_react-dom_0c1lx0k._.js",
+  "static/chunks/0r55_1llhx8y._.js",
+  "static/chunks/[root-of-the-server]__1qsnm2g._.js",
+  "static/chunks/OneDrive_Desktop_AVANFlix_afxframes-landing_afxframes_pages__app_0du2_q-._.js",
+  "static/chunks/1a4x_Desktop_AVANFlix_afxframes-landing_afxframes_pages__app_10en1f-._.js"
+])
