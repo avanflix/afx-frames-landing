@@ -10,6 +10,23 @@ export default function IntroSplash({ loaded }: IntroSplashProps) {
   return (
     <>
       <style>{`
+
+      @media (max-width: 768px) {
+  .intro-splash {
+    padding: 0 20px;
+  }
+
+  .splash-logo-wrap {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .splash-tagline {
+    text-align: center;
+    max-width: 280px;
+    line-height: 1.6;
+  }
+}
         .intro-splash {
           position: fixed;
           inset: 0;
@@ -212,7 +229,6 @@ export default function IntroSplash({ loaded }: IntroSplashProps) {
         <div className="splash-logo-wrap">
           <LogoMark size="splash" />
         </div>
-
         <div className="splash-rule" />
 
         <div className="splash-tagline">

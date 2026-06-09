@@ -301,9 +301,9 @@ export default function HeroSection({
         {/* Stats bar */}
         <div className="hero-stats">
           {[
-            { num: "500+", label: "Portfolios Created" },
+            { num: "20+", label: "Portfolios Created" },
             { num: "8", label: "Services Offered" },
-            { num: "5–7", label: "Day Delivery" },
+            { num: "4–6", label: "Day Delivery" },
             { num: "100%", label: "Agency-Ready" },
           ].map((s) => (
             <div className="hero-stat" key={s.label}>
@@ -312,7 +312,6 @@ export default function HeroSection({
             </div>
           ))}
         </div>
-
 
       </section>
     </>
