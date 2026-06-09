@@ -142,6 +142,23 @@ function IntroSplash({ loaded }) {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
                 children: `
+
+      @media (max-width: 768px) {
+  .intro-splash {
+    padding: 0 20px;
+  }
+
+  .splash-logo-wrap {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .splash-tagline {
+    text-align: center;
+    max-width: 280px;
+    line-height: 1.6;
+  }
+}
         .intro-splash {
           position: fixed;
           inset: 0;
@@ -353,19 +370,19 @@ function IntroSplash({ loaded }) {
                             size: "splash"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/IntroSplash.tsx",
-                            lineNumber: 213,
+                            lineNumber: 230,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/IntroSplash.tsx",
-                        lineNumber: 212,
+                        lineNumber: 229,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "splash-rule"
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/IntroSplash.tsx",
-                        lineNumber: 216,
+                        lineNumber: 232,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -373,7 +390,7 @@ function IntroSplash({ loaded }) {
                         children: "Hyderabad · Premium Creative Studio"
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/IntroSplash.tsx",
-                        lineNumber: 218,
+                        lineNumber: 234,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -383,33 +400,33 @@ function IntroSplash({ loaded }) {
                                 className: "splash-dot"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/IntroSplash.tsx",
-                                lineNumber: 223,
+                                lineNumber: 239,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "splash-dot"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/IntroSplash.tsx",
-                                lineNumber: 224,
+                                lineNumber: 240,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "splash-dot"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/IntroSplash.tsx",
-                                lineNumber: 225,
+                                lineNumber: 241,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/IntroSplash.tsx",
-                        lineNumber: 222,
+                        lineNumber: 238,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/IntroSplash.tsx",
-                lineNumber: 211,
+                lineNumber: 228,
                 columnNumber: 7
             }, this)
         ]
@@ -463,6 +480,7 @@ const NAV_LINKS = [
 function NavBar({ logoVisible, onBookNow }) {
     _s();
     const [scrolled, setScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [menuOpen, setMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "NavBar.useEffect": ()=>{
             const onScroll = {
@@ -548,15 +566,122 @@ function NavBar({ logoVisible, onBookNow }) {
         }
         .nav-logo-wrap.visible ~ .nav-links-list ~ .nav-book-btn { opacity: 1; }
         .nav-book-btn:hover { background: #b8960c; color: #0a0a0a; }
-        @media (max-width: 768px) {
-          .afx-nav { padding: 0 24px; }
-          .nav-links-list { display: none; }
-          .nav-book-btn { font-size: 0.6rem; padding: 8px 16px; }
-        }
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .afx-nav {
+    padding: 0 20px;
+  }
+
+  .nav-links-list {
+    display: none;
+  }
+
+  .nav-book-btn {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    width: 40px;
+    height: 40px;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu-btn span {
+    width: 24px;
+    height: 2px;
+    background: #d4af37;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 28px;
+
+    border-bottom: 1px solid rgba(184,150,12,0.2);
+
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+
+    transition: all 0.35s ease;
+    z-index: 999;
+  }
+
+  .mobile-menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    color: #f5f0e8;
+
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    padding: 6px 0;
+  }
+
+  .mobile-book-btn {
+    margin-top: 8px;
+
+    padding: 12px;
+    border: 1px solid #b8960c;
+
+    background: transparent;
+    color: #b8960c;
+
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+}
+
+.mobile-menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
       `
             }, void 0, false, {
                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
-                lineNumber: 39,
+                lineNumber: 41,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -569,12 +694,12 @@ function NavBar({ logoVisible, onBookNow }) {
                             size: "nav"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
-                            lineNumber: 117,
+                            lineNumber: 226,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
-                        lineNumber: 113,
+                        lineNumber: 222,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -589,17 +714,42 @@ function NavBar({ logoVisible, onBookNow }) {
                                     children: label
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
-                                    lineNumber: 123,
+                                    lineNumber: 232,
                                     columnNumber: 15
                                 }, this)
                             }, id, false, {
                                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
-                                lineNumber: 122,
+                                lineNumber: 231,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
-                        lineNumber: 120,
+                        lineNumber: 229,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: `mobile-menu-btn ${menuOpen ? "open" : ""}`,
+                        onClick: ()=>setMenuOpen(!menuOpen),
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
+                                fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
+                                lineNumber: 245,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
+                                fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
+                                lineNumber: 246,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
+                                fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
+                                lineNumber: 247,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
+                        lineNumber: 241,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -608,19 +758,53 @@ function NavBar({ logoVisible, onBookNow }) {
                         children: "Book a Shoot"
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
-                        lineNumber: 133,
+                        lineNumber: 250,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
-                lineNumber: 112,
+                lineNumber: 221,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `mobile-menu ${menuOpen ? "open" : ""}`,
+                children: [
+                    NAV_LINKS.map(({ label, id })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: `#${id}`,
+                            onClick: (e)=>{
+                                e.preventDefault();
+                                scrollTo(id);
+                                setMenuOpen(false);
+                            },
+                            children: label
+                        }, id, false, {
+                            fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
+                            lineNumber: 256,
+                            columnNumber: 11
+                        }, this)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: "mobile-book-btn",
+                        onClick: ()=>{
+                            onBookNow();
+                            setMenuOpen(false);
+                        },
+                        children: "Book a Shoot"
+                    }, void 0, false, {
+                        fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
+                        lineNumber: 269,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/NavBar.tsx",
+                lineNumber: 254,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
-_s(NavBar, "tQtW9FyKD+Ut/6k+f0BCbABprL4=");
+_s(NavBar, "EaXJNDiM7KISlWFYokQmqh/1M0I=");
 _c = NavBar;
 var _c;
 __turbopack_context__.k.register(_c, "NavBar");
@@ -1017,7 +1201,7 @@ function HeroSection({ onBookNow }) {
                         className: "hero-stats",
                         children: [
                             {
-                                num: "500+",
+                                num: "20+",
                                 label: "Portfolios Created"
                             },
                             {
@@ -1025,7 +1209,7 @@ function HeroSection({ onBookNow }) {
                                 label: "Services Offered"
                             },
                             {
-                                num: "5–7",
+                                num: "4–6",
                                 label: "Day Delivery"
                             },
                             {
@@ -2494,7 +2678,7 @@ function CTAAndFooter({ onBookNow }) {
                                 },
                                 {
                                     label: "Phone",
-                                    value: "+91 98765 43210"
+                                    value: "+91 77992 25757"
                                 },
                                 {
                                     label: "Location",

@@ -11,18 +11,20 @@ interface NavBarProps {
 
 
 const NAV_LINKS = [
-  { label: "About",    id: "about"    },
-  { label: "Gallery",    id: "gallery"    },
+  { label: "About", id: "about" },
+  { label: "Gallery", id: "gallery" },
   { label: "Services", id: "services" },
-  { label: "Why Us",   id: "why"      },
+  { label: "Why Us", id: "why" },
   // { label: "Packages", id: "packages" },
-  { label: "Contact",  id: "contact"  },
+  { label: "Contact", id: "contact" },
 ];
 
 export default function NavBar({
   logoVisible,
   onBookNow,
-}: NavBarProps) {  const [scrolled, setScrolled] = useState(false);
+}: NavBarProps) {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -102,11 +104,118 @@ export default function NavBar({
         }
         .nav-logo-wrap.visible ~ .nav-links-list ~ .nav-book-btn { opacity: 1; }
         .nav-book-btn:hover { background: #b8960c; color: #0a0a0a; }
-        @media (max-width: 768px) {
-          .afx-nav { padding: 0 24px; }
-          .nav-links-list { display: none; }
-          .nav-book-btn { font-size: 0.6rem; padding: 8px 16px; }
-        }
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .afx-nav {
+    padding: 0 20px;
+  }
+
+  .nav-links-list {
+    display: none;
+  }
+
+  .nav-book-btn {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    width: 40px;
+    height: 40px;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu-btn span {
+    width: 24px;
+    height: 2px;
+    background: #d4af37;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 28px;
+
+    border-bottom: 1px solid rgba(184,150,12,0.2);
+
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+
+    transition: all 0.35s ease;
+    z-index: 999;
+  }
+
+  .mobile-menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    color: #f5f0e8;
+
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    padding: 6px 0;
+  }
+
+  .mobile-book-btn {
+    margin-top: 8px;
+
+    padding: 12px;
+    border: 1px solid #b8960c;
+
+    background: transparent;
+    color: #b8960c;
+
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+}
+
+.mobile-menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
       `}</style>
 
       <nav className={`afx-nav${scrolled ? " scrolled" : ""}`}>
@@ -129,11 +238,44 @@ export default function NavBar({
             </li>
           ))}
         </ul>
+        <button
+          className={`mobile-menu-btn ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
 
         <button className="nav-book-btn" onClick={onBookNow}>
           Book a Shoot
         </button>
       </nav>
+      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        {NAV_LINKS.map(({ label, id }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollTo(id);
+              setMenuOpen(false);
+            }}
+          >
+            {label}
+          </a>
+        ))}
+
+        <button
+          className="mobile-book-btn"
+          onClick={() => {
+            onBookNow();
+            setMenuOpen(false);
+          }}
+        >
+          Book a Shoot
+        </button>
+      </div>
     </>
   );
 }
