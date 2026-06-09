@@ -132,7 +132,7 @@ export default function CTAAndFooter({
           <div className="cta-contact">
             {[
               { label: "Email",    value: "info@afxframes.com" },
-              { label: "Phone",    value: "+91 98765 43210"    },
+              { label: "Phone",    value: "+91 77992 25757"    },
               { label: "Location", value: "Hyderabad, India"   },
             ].map((c) => (
               <div className="contact-block" key={c.label}>
