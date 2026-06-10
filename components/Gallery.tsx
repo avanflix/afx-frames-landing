@@ -1,19 +1,19 @@
 import Image from "next/image";
 
 export default function GallerySection() {
-    const GALLERY_IMAGES = [
-        "/gallery/5.jpg",
-        "/gallery/9.jpg",
-        "/gallery/14.jpg",
-        "/gallery/3.jpg",
-        "/gallery/10.jpg",
-        "/gallery/4.jpg",
-        "/gallery/11.jpg",
-        "/gallery/1.jpg",
-    ];
+  const GALLERY_IMAGES = [
+    { src: "/gallery2/10.jpg", position: "center 15%" },
+    { src: "/gallery2/12.jpg", position: "center center" },
+    { src: "/gallery2/3.jpg", position: "center 20%" },
+    { src: "/gallery2/4.jpg", position: "center center" },
+    { src: "/gallery2/5.jpg", position: "center 10%" },
+    { src: "/gallery2/6.jpg", position: "center center" },
+    { src: "/gallery2/9.jpg", position: "center 15%" },
+    { src: "/gallery2/11.jpg", position: "center center" },
+  ];
 
-    return (
-        <> <style>{`
+  return (
+    <> <style>{`
 .gallery-section {
   background: #111111;
   padding: 120px 48px;
@@ -73,6 +73,7 @@ export default function GallerySection() {
 
 .gallery-image {
   object-fit: cover;
+  object-position: center top;
   transition: transform 0.8s ease;
 }
 
@@ -173,11 +174,9 @@ export default function GallerySection() {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  height: 100vh;
+  grid-auto-rows: 90px;
+  gap: 15px;
   width: 100%;
-  gap: 0;
-  overflow: hidden;
 }
 
 /* Editorial Positions */
@@ -323,31 +322,35 @@ export default function GallerySection() {
 }
   `}</style>
 
-            <section className="gallery-section" id="gallery">
-                <div className="gallery-inner">
-                    <div className="section-label-g">Portfolio</div>
+      <section className="gallery-section" id="gallery">
+        <div className="gallery-inner">
+          <div className="section-label-g">Portfolio</div>
 
-                    <h2 className="section-title-g">
-                        Featured <em>Gallery</em>
-                    </h2>
+          <h2 className="section-title-g">
+            Featured <em>Gallery</em>
+          </h2>
 
-                    <div className="gold-rule-g" />
+          <div className="gold-rule-g" />
 
-                    <div className="gallery-grid">
-                        {GALLERY_IMAGES.map((img, index) => (
-                            <div className="gallery-item" key={index}>
-                                <Image
-                                    src={img}
-                                    alt={`Gallery ${index + 1}`}
-                                    fill
-                                    className="gallery-image"
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-        </>
+          <div className="gallery-grid">
+            {GALLERY_IMAGES.map((img, index) => (
+              <div className="gallery-item" key={index}>
+                <Image
+                  src={img.src}
+                  alt={`Gallery ${index + 1}`}
+                  fill
+                  sizes="(max-width:768px) 100vw, (max-width:1024px) 50vw, 33vw"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: img.position,
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
 
-    );
+  );
 }

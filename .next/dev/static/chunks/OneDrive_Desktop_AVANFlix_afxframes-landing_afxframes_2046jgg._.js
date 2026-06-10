@@ -1200,10 +1200,7 @@ function HeroSection({ onBookNow }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "hero-stats",
                         children: [
-                            {
-                                num: "20+",
-                                label: "Portfolios Created"
-                            },
+                            // { num: "20+", label: "Portfolios Created" },
                             {
                                 num: "8",
                                 label: "Services Offered"
@@ -2262,21 +2259,25 @@ const TESTIMONIALS = [
     {
         name: "Priya Reddy",
         role: "Model — Hyderabad",
+        image: "/gallery2/1.jpg",
         text: "I was nervous before the shoot, but the team made me feel comfortable from the start. The photos came out better than I expected."
     },
     {
         name: "Arjun Mehta",
         role: "Actor — Hyderabad",
+        image: "/gallery2/2.jpg",
         text: "The entire process was smooth and professional. They guided me with poses and expressions, which made a huge difference in the final pictures."
     },
     {
         name: "Rahul Sharma",
         role: "Model — Hyderabad",
+        image: "/gallery2/3.jpg",
         text: "Loved the experience. The team paid attention to every detail, and the final portfolio looked clean, polished, and exactly what I was looking for."
     },
     {
         name: "Praveen Reddy",
         role: "Model — Hyderabad",
+        image: "/gallery2/4.jpg",
         text: "What I liked most was how natural everything felt. The team was patient, gave clear direction, and the photos genuinely reflected my personality."
     }
 ];
@@ -2309,12 +2310,14 @@ function TestimonialsSection() {
           gap: 2px;
           background: rgba(184,150,12,0.15);
         }
-        .testi-card {
-          background: #161616;
-          padding: 52px;
-          position: relative;
-          transition: background 0.3s;
-        }
+.testi-card {
+  background: #161616;
+  padding: 52px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: background 0.3s;
+}
         .testi-card:hover { background: #1a1a1a; }
         .testi-card::before {
           content: '\\201C';
@@ -2329,7 +2332,7 @@ function TestimonialsSection() {
           font-size: 1.15rem; font-style: italic;
           color: rgba(245,240,232,0.78);
           line-height: 1.85; margin-bottom: 36px;
-          position: relative; z-index: 1;
+          position: relative; z-index: 2;
         }
         .testi-author { display: flex; align-items: center; gap: 18px; }
         .testi-rule { width: 24px; height: 1px; background: #b8960c; flex-shrink: 0; }
@@ -2342,6 +2345,43 @@ function TestimonialsSection() {
           font-size: 0.62rem; letter-spacing: 0.12em;
           text-transform: uppercase; color: #b8960c; font-weight: 500;
         }
+
+.testi-bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 100%;
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  opacity: 0.12;
+  filter: grayscale(100%);
+
+  z-index: 0;
+
+  mask-image: linear-gradient(
+    to left,
+    rgba(0,0,0,1),
+    rgba(0,0,0,0)
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to left,
+    rgba(0,0,0,1),
+    rgba(0,0,0,0)
+  );
+}
+  .testi-card:hover .testi-bg-image {
+  opacity: 0.78;
+  transform: scale(1.05);
+}
+
+.testi-bg-image {
+  transition: all 0.6s ease;
+}
         @media (max-width: 768px) {
           .testi-grid { grid-template-columns: 1fr; }
           .testi-section { padding: 80px 24px; }
@@ -2350,7 +2390,7 @@ function TestimonialsSection() {
       `
             }, void 0, false, {
                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                lineNumber: 27,
+                lineNumber: 31,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2364,7 +2404,7 @@ function TestimonialsSection() {
                             children: "Client Stories"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                            lineNumber: 94,
+                            lineNumber: 137,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2373,19 +2413,19 @@ function TestimonialsSection() {
                                 children: "Testimonials"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                                lineNumber: 95,
+                                lineNumber: 138,
                                 columnNumber: 43
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                            lineNumber: 95,
+                            lineNumber: 138,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "gold-rule-t"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                            lineNumber: 96,
+                            lineNumber: 139,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2393,12 +2433,22 @@ function TestimonialsSection() {
                             children: TESTIMONIALS.map((t)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "testi-card",
                                     children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "testi-bg-image",
+                                            style: {
+                                                backgroundImage: `url(${t.image})`
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
+                                            lineNumber: 143,
+                                            columnNumber: 17
+                                        }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "testi-text",
                                             children: t.text
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                                            lineNumber: 100,
+                                            lineNumber: 148,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2408,7 +2458,7 @@ function TestimonialsSection() {
                                                     className: "testi-rule"
                                                 }, void 0, false, {
                                                     fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                                                    lineNumber: 102,
+                                                    lineNumber: 151,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2418,7 +2468,7 @@ function TestimonialsSection() {
                                                             children: t.name
                                                         }, void 0, false, {
                                                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                                                            lineNumber: 104,
+                                                            lineNumber: 153,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2426,41 +2476,41 @@ function TestimonialsSection() {
                                                             children: t.role
                                                         }, void 0, false, {
                                                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                                                            lineNumber: 105,
+                                                            lineNumber: 154,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                                                    lineNumber: 103,
+                                                    lineNumber: 152,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                                            lineNumber: 101,
+                                            lineNumber: 150,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, t.name, true, {
                                     fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 142,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                            lineNumber: 97,
+                            lineNumber: 140,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                    lineNumber: 93,
+                    lineNumber: 136,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/TestimonialsSection.tsx",
-                lineNumber: 92,
+                lineNumber: 135,
                 columnNumber: 7
             }, this)
         ]
@@ -2783,14 +2833,38 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANF
 ;
 function GallerySection() {
     const GALLERY_IMAGES = [
-        "/gallery/5.jpg",
-        "/gallery/9.jpg",
-        "/gallery/14.jpg",
-        "/gallery/3.jpg",
-        "/gallery/10.jpg",
-        "/gallery/4.jpg",
-        "/gallery/11.jpg",
-        "/gallery/1.jpg"
+        {
+            src: "/gallery2/10.jpg",
+            position: "center 15%"
+        },
+        {
+            src: "/gallery2/12.jpg",
+            position: "center center"
+        },
+        {
+            src: "/gallery2/3.jpg",
+            position: "center 20%"
+        },
+        {
+            src: "/gallery2/4.jpg",
+            position: "center center"
+        },
+        {
+            src: "/gallery2/5.jpg",
+            position: "center 10%"
+        },
+        {
+            src: "/gallery2/6.jpg",
+            position: "center center"
+        },
+        {
+            src: "/gallery2/9.jpg",
+            position: "center 15%"
+        },
+        {
+            src: "/gallery2/11.jpg",
+            position: "center center"
+        }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
@@ -2856,6 +2930,7 @@ function GallerySection() {
 
 .gallery-image {
   object-fit: cover;
+  object-position: center top;
   transition: transform 0.8s ease;
 }
 
@@ -2956,11 +3031,9 @@ function GallerySection() {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  height: 100vh;
+  grid-auto-rows: 90px;
+  gap: 15px;
   width: 100%;
-  gap: 0;
-  overflow: hidden;
 }
 
 /* Editorial Positions */
@@ -3108,7 +3181,7 @@ function GallerySection() {
             }, void 0, false, {
                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/Gallery.tsx",
                 lineNumber: 16,
-                columnNumber: 12
+                columnNumber: 8
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "gallery-section",
@@ -3121,8 +3194,8 @@ function GallerySection() {
                             children: "Portfolio"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/Gallery.tsx",
-                            lineNumber: 328,
-                            columnNumber: 21
+                            lineNumber: 327,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                             className: "section-title-g",
@@ -3132,56 +3205,60 @@ function GallerySection() {
                                     children: "Gallery"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/Gallery.tsx",
-                                    lineNumber: 331,
-                                    columnNumber: 34
+                                    lineNumber: 330,
+                                    columnNumber: 22
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/Gallery.tsx",
-                            lineNumber: 330,
-                            columnNumber: 21
+                            lineNumber: 329,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "gold-rule-g"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/Gallery.tsx",
-                            lineNumber: 334,
-                            columnNumber: 21
+                            lineNumber: 333,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "gallery-grid",
                             children: GALLERY_IMAGES.map((img, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "gallery-item",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AVANFlix$2f$afxframes$2d$landing$2f$afxframes$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                        src: img,
+                                        src: img.src,
                                         alt: `Gallery ${index + 1}`,
                                         fill: true,
-                                        className: "gallery-image"
+                                        sizes: "(max-width:768px) 100vw, (max-width:1024px) 50vw, 33vw",
+                                        style: {
+                                            objectFit: "cover",
+                                            objectPosition: img.position
+                                        }
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/Gallery.tsx",
-                                        lineNumber: 339,
-                                        columnNumber: 33
+                                        lineNumber: 338,
+                                        columnNumber: 17
                                     }, this)
                                 }, index, false, {
                                     fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/Gallery.tsx",
-                                    lineNumber: 338,
-                                    columnNumber: 29
+                                    lineNumber: 337,
+                                    columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/Gallery.tsx",
-                            lineNumber: 336,
-                            columnNumber: 21
+                            lineNumber: 335,
+                            columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/Gallery.tsx",
-                    lineNumber: 327,
-                    columnNumber: 17
+                    lineNumber: 326,
+                    columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/OneDrive/Desktop/AVANFlix/afxframes-landing/afxframes/components/Gallery.tsx",
-                lineNumber: 326,
-                columnNumber: 13
+                lineNumber: 325,
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true);

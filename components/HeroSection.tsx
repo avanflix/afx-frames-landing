@@ -301,7 +301,7 @@ export default function HeroSection({
         {/* Stats bar */}
         <div className="hero-stats">
           {[
-            { num: "20+", label: "Portfolios Created" },
+            // { num: "20+", label: "Portfolios Created" },
             { num: "8", label: "Services Offered" },
             { num: "4–6", label: "Day Delivery" },
             { num: "100%", label: "Agency-Ready" },

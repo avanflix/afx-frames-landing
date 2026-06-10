@@ -2,21 +2,25 @@ const TESTIMONIALS = [
   {
     name: "Priya Reddy",
     role: "Model — Hyderabad",
+    image: "/gallery2/1.jpg",
     text: "I was nervous before the shoot, but the team made me feel comfortable from the start. The photos came out better than I expected.",
   },
   {
     name: "Arjun Mehta",
     role: "Actor — Hyderabad",
+    image: "/gallery2/2.jpg",
     text: "The entire process was smooth and professional. They guided me with poses and expressions, which made a huge difference in the final pictures.",
   },
   {
     name: "Rahul Sharma",
     role: "Model — Hyderabad",
+    image: "/gallery2/3.jpg",
     text: "Loved the experience. The team paid attention to every detail, and the final portfolio looked clean, polished, and exactly what I was looking for.",
   },
   {
     name: "Praveen Reddy",
     role: "Model — Hyderabad",
+    image: "/gallery2/4.jpg",
     text: "What I liked most was how natural everything felt. The team was patient, gave clear direction, and the photos genuinely reflected my personality.",
   },
 ];
@@ -49,12 +53,14 @@ export default function TestimonialsSection() {
           gap: 2px;
           background: rgba(184,150,12,0.15);
         }
-        .testi-card {
-          background: #161616;
-          padding: 52px;
-          position: relative;
-          transition: background 0.3s;
-        }
+.testi-card {
+  background: #161616;
+  padding: 52px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: background 0.3s;
+}
         .testi-card:hover { background: #1a1a1a; }
         .testi-card::before {
           content: '\\201C';
@@ -69,7 +75,7 @@ export default function TestimonialsSection() {
           font-size: 1.15rem; font-style: italic;
           color: rgba(245,240,232,0.78);
           line-height: 1.85; margin-bottom: 36px;
-          position: relative; z-index: 1;
+          position: relative; z-index: 2;
         }
         .testi-author { display: flex; align-items: center; gap: 18px; }
         .testi-rule { width: 24px; height: 1px; background: #b8960c; flex-shrink: 0; }
@@ -82,6 +88,43 @@ export default function TestimonialsSection() {
           font-size: 0.62rem; letter-spacing: 0.12em;
           text-transform: uppercase; color: #b8960c; font-weight: 500;
         }
+
+.testi-bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 100%;
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  opacity: 0.12;
+  filter: grayscale(100%);
+
+  z-index: 0;
+
+  mask-image: linear-gradient(
+    to left,
+    rgba(0,0,0,1),
+    rgba(0,0,0,0)
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to left,
+    rgba(0,0,0,1),
+    rgba(0,0,0,0)
+  );
+}
+  .testi-card:hover .testi-bg-image {
+  opacity: 0.78;
+  transform: scale(1.05);
+}
+
+.testi-bg-image {
+  transition: all 0.6s ease;
+}
         @media (max-width: 768px) {
           .testi-grid { grid-template-columns: 1fr; }
           .testi-section { padding: 80px 24px; }
@@ -97,7 +140,13 @@ export default function TestimonialsSection() {
           <div className="testi-grid">
             {TESTIMONIALS.map((t) => (
               <div className="testi-card" key={t.name}>
+                <div
+                  className="testi-bg-image"
+                  style={{ backgroundImage: `url(${t.image})` }}
+                />
+
                 <p className="testi-text">{t.text}</p>
+
                 <div className="testi-author">
                   <div className="testi-rule" />
                   <div>
