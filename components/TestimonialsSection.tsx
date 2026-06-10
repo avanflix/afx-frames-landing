@@ -1,26 +1,42 @@
+
+  //.testi-text,
+// .testi-author {
+//   position: relative;
+//   z-index: 2;
+//   transition: all 0.5s ease;
+// }
+
+// .testi-card:hover .testi-text {
+//   opacity: 0.15;
+//   filter: blur(10px);
+// }
+
+// .testi-card:hover .testi-author {
+//   opacity: 0.35;
+// }
 const TESTIMONIALS = [
   {
     name: "Priya Reddy",
     role: "Model — Hyderabad",
-    image: "/gallery2/1.jpg",
+    image: "/gallery2/6.jpg",
     text: "I was nervous before the shoot, but the team made me feel comfortable from the start. The photos came out better than I expected.",
   },
   {
-    name: "Arjun Mehta",
+    name: "MYRA CHOWDARYI",
     role: "Actor — Hyderabad",
-    image: "/gallery2/2.jpg",
+    image: "/gallery2/12.jpg",
     text: "The entire process was smooth and professional. They guided me with poses and expressions, which made a huge difference in the final pictures.",
   },
   {
-    name: "Rahul Sharma",
+    name: "ANVI",
     role: "Model — Hyderabad",
     image: "/gallery2/3.jpg",
     text: "Loved the experience. The team paid attention to every detail, and the final portfolio looked clean, polished, and exactly what I was looking for.",
   },
   {
-    name: "Praveen Reddy",
+    name: "Jai",
     role: "Model — Hyderabad",
-    image: "/gallery2/4.jpg",
+    image: "/gallery/3.jpg",
     text: "What I liked most was how natural everything felt. The team was patient, gave clear direction, and the photos genuinely reflected my personality.",
   },
 ];
