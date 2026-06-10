@@ -291,7 +291,7 @@ export default function HeroSection({
             <a
               href="#gallery"
               className="hero-btn-outline"
-              onClick={(e) => { e.preventDefault(); scrollTo("about"); }}
+              onClick={(e) => { e.preventDefault(); scrollTo("gallery"); }}
             >
               Explore Our Work
             </a>
