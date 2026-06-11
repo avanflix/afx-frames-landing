@@ -1,19 +1,5 @@
 
-  //.testi-text,
-// .testi-author {
-//   position: relative;
-//   z-index: 2;
-//   transition: all 0.5s ease;
-// }
 
-// .testi-card:hover .testi-text {
-//   opacity: 0.15;
-//   filter: blur(10px);
-// }
-
-// .testi-card:hover .testi-author {
-//   opacity: 0.35;
-// }
 const TESTIMONIALS = [
   {
     name: "Priya Reddy",
@@ -76,6 +62,21 @@ export default function TestimonialsSection() {
   overflow: hidden;
   isolation: isolate;
   transition: background 0.3s;
+}
+
+.testi-author {
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.testi-card:hover .testi-text {
+  opacity: 0.15;
+  filter: blur(10px);
+}
+
+.testi-card:hover .testi-author {
+  opacity: 0.35;
 }
         .testi-card:hover { background: #1a1a1a; }
         .testi-card::before {
